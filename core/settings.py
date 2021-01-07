@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'app'
 ]
 
 MIDDLEWARE = [
@@ -112,6 +114,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# CELERY
+CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
+CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/0"
 
 
 # Static files (CSS, JavaScript, Images)
